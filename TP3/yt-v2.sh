@@ -1,7 +1,7 @@
 #!/bin/bash
 while true; do
     if [[ -d "/srv/yt/downloads" && -d "/var/log/yt/" && -s "/srv/yt/video-urls" ]]; then
-        while read -r line < /srv/yt/url; do
+        while read -r line < /srv/yt/video-urls; do
             if [[ "$line" =~ https://www.youtube.com/ ]]; then
                 if youtube-dl -e "$line" &> /dev/null; then
                     title=$(youtube-dl -e "$line")
