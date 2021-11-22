@@ -9,9 +9,10 @@ if [[ -d downloads && -d /var/log/yt ]]; then
                 mkdir downloads/"${title}"
                 cd "downloads/${title}" && youtube-dl -q -f mp4 -o "${title}.mp4" "$1" 2>/dev/null
                 echo "$1 was downloaded."
-                youtube-dl -q --write-description --skip-download --youtube-skip-dash-manifest -o "desc" "$1" 2>/dev/nu>                mv desc.description description
+                youtube-dl -q --write-description --skip-download --youtube-skip-dash-manifest -o "desc" "$1" 2>/dev/null>mv desc.description description
                 echo File Path : /srv/yt/downloads/"${title}"/"${title}"
-                sudo echo "[$(date "+%D %T")] Video $1 was downloaded. File Path : /srv/yt/downloads/""${title}""/""${t>        fi
+                sudo echo "[$(date "+%D %T")] Video $1 was downloaded. File Path : /srv/yt/downloads/""${title}""/""${title}>> /var/log/yt/download.log        
+        fi
 else
         if [[ -d /var/log/yt ]]; then
                 echo "Dossier downloads non existant, reessayez."
