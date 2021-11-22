@@ -1,0 +1,8 @@
+[Unit]
+Description= YT service
+
+[Service]
+ExecStart=sudo bash /srv/yt/yt-v2.sh
+
+[Install]
+WantedBy=multi-user.target
