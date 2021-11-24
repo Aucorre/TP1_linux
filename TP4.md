@@ -144,6 +144,12 @@ nginx      20745   20744  0 11:33 ?        00:00:00 nginx: worker process
 [audren@node1 ~]$ sudo ss -ltpn | grep nginx
 LISTEN 0      128          0.0.0.0:80        0.0.0.0:*    users:(("nginx",pid=20745,fd=8),("nginx",pid=20744,fd=8))
 LISTEN 0      128             [::]:80           [::]:*    users:(("nginx",pid=20745,fd=9),("nginx",pid=20744,fd=9))
+
+
+[audren@node1 nginx]$ cat nginx.conf
+[...]
+        root         /usr/share/nginx/html;
+[...]    
 ```
 ## 4. Visite du service web
 
