@@ -151,6 +151,12 @@ LISTEN 0      128             [::]:80           [::]:*    users:(("nginx",pid=20
         root         /usr/share/nginx/html;
 [...]    
 ```
+[audren@node1 html]$ ls -la /usr/share/nginx/html/
+-rw-r--r--. 1 root   root   3332 Jun 10 11:09 404.html
+-rw-r--r--. 1 root   root   3404 Jun 10 11:09 50x.html
+-rw-r--r--. 1 root   root   3429 Jun 10 11:09 index.html
+-rw-r--r--. 1 root   root    368 Jun 10 11:09 nginx-logo.png
+-rw-r--r--. 1 root   root   1800 Jun 10 11:09 poweredby.png
 ## 4. Visite du service web
 
 **Configuration du firewall pour autoriser le trafic vers le service NGINX** 
