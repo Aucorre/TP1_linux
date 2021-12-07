@@ -1,0 +1,9 @@
+Description=Laucnhes backup.service at regular intervals.
+Requires=backup.service
+
+[Timer]
+Unit=backup.service
+OnCalendar=hourly
+
+[Install]
+WantedBy=timers.target
