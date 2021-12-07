@@ -1,0 +1,10 @@
+[Unit]
+Description=Launches backup_db.service every hour.
+Requires=backup_db.service
+
+[Timer]
+Unit=backup_db.service
+OnCalendar=hourly
+
+[Install]
+WantedBy=timers.target
