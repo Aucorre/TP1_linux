@@ -4,7 +4,7 @@
 
 
 
-name=("/srv/backup/nexcloud_$(date +"%y%m%d_%H%m%S").tar.gz")
+name=("/srv/backup/nextcloud_$(date +"%y%m%d_%H%m%S").tar.gz")
 cd /var/www/
 /usr/bin/tar -czvf "$name" nextcloud/ &> /dev/null
 
